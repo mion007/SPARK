@@ -32,7 +32,7 @@ def takecommand():
         query = r.recognize_google(audio, language='en-in')
         print(f"user said: {query}")
         eel.DisplayMessage(query)
-        time.sleep(2)
+        time.sleep(1)
        
     except Exception as e:
         return ""
@@ -50,14 +50,12 @@ def allCommands(message=1):
         query = message
         eel.senderText(query)
     try:
-
         if "open" in query:
             from engine.features import openCommand
             openCommand(query)
         elif "on youtube" in query:
             from engine.features import PlayYoutube
             PlayYoutube(query)
-        
         elif "send message" in query or "phone call" in query or "video call" in query:
             from engine.features import findContact, whatsApp, makeCall, sendMessage
             contact_no, name = findContact(query)
