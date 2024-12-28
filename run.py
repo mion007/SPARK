@@ -3,7 +3,7 @@
 import multiprocessing
 import subprocess
 
-# To run Jarvis
+# To run Spark
 def startJarvis():
         # Code for process 1
         print("Process 1 is running.")
