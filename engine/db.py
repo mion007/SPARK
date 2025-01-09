@@ -19,7 +19,7 @@ query = "CREATE TABLE IF NOT EXISTS web_command(id integer primary key, name VAR
 cursor.execute(query)
 
 # Insert a command into the web_command table
-query = "INSERT INTO web_command VALUES (null, 'youtube', 'https://www.youtube.com/')"
+query = "INSERT INTO web_command VALUES (null, 'youtube', 'https://www.youtube.com')"
 cursor.execute(query)
 con.commit()
 
